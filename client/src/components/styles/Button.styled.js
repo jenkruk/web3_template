@@ -9,7 +9,7 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-  padding: 10px 40px;
+  padding: 10px 20px;
   background-color: ${({ bg }) => bg || '#fff'};
   color: ${({ color }) => color || '#333'};
 

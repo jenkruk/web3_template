@@ -38,6 +38,7 @@ color: ${({ theme }) => theme.colors.light};
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+  padding: 0 5vw;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;

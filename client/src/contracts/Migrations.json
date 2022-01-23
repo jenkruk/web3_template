@@ -447,7 +447,7 @@
   "sourceMap": "57:311:13:-:0;;;209:50;;;;;;;;;-1:-1:-1;236:5:13;:18;;-1:-1:-1;;;;;;236:18:13;244:10;236:18;;;57:311;;;;;;",
   "deployedSourceMap": "57:311:13:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;105:36;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;81:20;;;:::i;:::-;;;;;;;:::i;263:103::-;;;;;;:::i;:::-;;:::i;:::-;;105:36;;;;:::o;81:20::-;;;-1:-1:-1;;;;;81:20:13;;:::o;263:103::-;192:5;;-1:-1:-1;;;;;192:5:13;178:10;:19;174:26;;;325:24:::1;:36:::0;;;174:26;263:103;:::o;14:190:15:-;;126:2;114:9;105:7;101:23;97:32;94:2;;;147:6;139;132:22;94:2;-1:-1:-1;175:23:15;;84:120;-1:-1:-1;84:120:15:o;209:203::-;-1:-1:-1;;;;;373:32:15;;;;355:51;;343:2;328:18;;310:102::o;417:177::-;563:25;;;551:2;536:18;;518:76::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract Migrations {\n  address public owner;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    if (msg.sender == owner) _;\n  }\n\n  constructor() public {\n    owner = msg.sender;\n  }\n\n  function setCompleted(uint completed) public restricted {\n    last_completed_migration = completed;\n  }\n}\n",
-  "sourcePath": "/Users/jenniferkruk/Desktop/My_Work/swim/MyRepos/tutorials/interloop_template/contracts/Migrations.sol",
+  "sourcePath": "/Users/jenniferkruk/Desktop/My_Work/swim/MyRepos/web3_template/contracts/Migrations.sol",
   "ast": {
     "absolutePath": "project:/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -1234,12 +1234,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x62B283F16DC92bb552A3E055bB008F835eBa4CC6",
-      "transactionHash": "0xdcfde1445e5934a31783a87cf2b795becda3027ff07497a13a5e30714f955f12"
+      "address": "0xb68643b6966a715a4eEc89aF627e92d546781282",
+      "transactionHash": "0x405ad060deefaffc7cc661009f1cbb588ed9653b6481a8a460d6b30def64e5a8"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-23T19:27:22.019Z",
+  "updatedAt": "2022-01-23T20:08:16.177Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

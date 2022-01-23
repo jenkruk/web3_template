@@ -282,7 +282,7 @@
   "sourceMap": "57:176:14:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "57:176:14:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;104:53;;;;;;:::i;:::-;;:::i;:::-;;161:70;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;104:53;138:10;:14;104:53::o;161:70::-;197:4;216:10;161:70;:::o;14:190:15:-;;126:2;114:9;105:7;101:23;97:32;94:2;;;147:6;139;132:22;94:2;-1:-1:-1;175:23:15;;84:120;-1:-1:-1;84:120:15:o;209:177::-;355:25;;;343:2;328:18;;310:76::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract SimpleStorage {\n  uint storedData;\n\n  function set(uint x) public {\n    storedData = x;\n  }\n\n  function get() public view returns (uint) {\n    return storedData;\n  }\n}\n",
-  "sourcePath": "/Users/jenniferkruk/Desktop/My_Work/swim/MyRepos/tutorials/interloop_template/contracts/SimpleStorage.sol",
+  "sourcePath": "/Users/jenniferkruk/Desktop/My_Work/swim/MyRepos/web3_template/contracts/SimpleStorage.sol",
   "ast": {
     "absolutePath": "project:/contracts/SimpleStorage.sol",
     "exportedSymbols": {
@@ -789,12 +789,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xED6a1777EAFA2a0E2950E7Bc1e52dFB412374E32",
-      "transactionHash": "0x5e64ba98890030aec43afd00a242c005034273b4772794b901d2901b10217151"
+      "address": "0x766ACdf85B496a792D4976529AD6eB600B855ab3",
+      "transactionHash": "0xa04e0de9e0633a11501692b1a6d796efee88092e63b13503153fa44a3598df41"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-23T19:27:22.012Z",
+  "updatedAt": "2022-01-23T20:08:16.171Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

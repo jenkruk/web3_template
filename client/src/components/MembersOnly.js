@@ -7,7 +7,8 @@ const MembersOnly = () => {
     <Button
       style={{
           display: 'block',
-          marginTop: '7px'
+          marginTop: '7px',
+          width: '187px'
       }}
       >
           Members Only

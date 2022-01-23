@@ -8,7 +8,8 @@ export const StyledFooter = styled.footer`
   bottom: 0;
   width: 100vw;
   color: #fff;
-  padding: 100px 0 60px;
+  padding: 100px 5vw 60px 0;
+
 
   h1 {
     font-family: 'Poiret One';
