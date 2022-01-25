@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 
-const NFTRow = (props) => {
+// const NFTRow = (props) => {
 
-    const [owner, setOwner] = useState('')
+//     const [owner, setOwner] = useState('')
 
-    useEffect(() => {
-        const load = async () => {
-            try {
-                let owner = await props.contract.methods.ownerOf(props.id).call();
-                setOwner(owner)
-            } catch {
-                setOwner("Loading...")
+//     useEffect(() => {
+//         const load = async () => {
+//             try {
+//                 let owner = await props.contract.methods.ownerOf(props.id).call();
+//                 setOwner(owner)
+//             } catch {
+//                 setOwner("Loading...")
 
-                setInterval(()=> {
-                    load()
-                }, 2000)
-            }
-        }
-        load()
-    }, [])
+//                 setInterval(()=> {
+//                     load()
+//                 }, 2000)
+//             }
+//         }
+//         load()
+//     }, [])
 
-  return (
-    <tr><td>{props.id}</td><td>{owner}</td></tr>
-  )
-};
+//   return (
+//     <tr><td>{props.id}</td><td>{owner}</td></tr>
+//   )
+// };
 
-export default NFTRow;
+// export default NFTRow;

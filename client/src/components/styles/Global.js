@@ -15,6 +15,10 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+  a {
+    font-family: 'Poppins', sans-serif;
+  }
+
   p {
     opacity: 0.6;
     line-height: 1.5;

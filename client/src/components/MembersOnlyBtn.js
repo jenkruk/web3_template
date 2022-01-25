@@ -1,19 +1,23 @@
 import React from 'react';
-import { Button } from './styles/Button.styled'
+import Anchor from './styles/Anchor.styled'
 
-const MembersOnly = () => {
+
+const MembersOnlyBtn = () => {
+
   return (
 
-    <Button
+      <Anchor
       style={{
           display: 'block',
           marginTop: '7px',
           width: '187px'
       }}
+      href={'/MembersOnly'}
       >
           Members Only
-    </Button>
-  )
-};
+    </Anchor>
+    )
+  }
 
-export default MembersOnly;
+
+export default MembersOnlyBtn;

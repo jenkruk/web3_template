@@ -2,15 +2,18 @@ import React, { Component } from "react";
 import Web3 from "web3";
 import Frog from "../contracts/Frog.json";
 import getWeb3 from "./getWeb3";
-// import NFTRow from "../components/NFTRow";
 import { Button } from '../components/styles/Button.styled'
-import MembersOnly from '../components/MembersOnly';
+import MembersOnly from '../components/MembersOnlyBtn';
 
 class Mint extends Component {
+
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
 
   componentDidMount = async () => {
+
+
     try {
+      
       // Get network provider and web3 instance.
       const web3 = await getWeb3();
       const web3socket = new Web3(new Web3.providers.WebsocketProvider('ws://localhost:7545'));
@@ -70,6 +73,7 @@ async mintNFT(e) {
   })
 }
 
+
 setQuantity(e){
   this.setState({quantity: e.target.value})
 }
@@ -81,6 +85,7 @@ nftIDs() {
 }
 
   render() {
+    
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
@@ -121,8 +126,8 @@ nftIDs() {
               <option value="10">10</option>
           </select>&nbsp;
         <Button href="#" className="MintNowBtn" onClick={this.mintNFT.bind(this)}>Mint {this.state.quantity} Now</Button>
-        {/* <br /> */}
-          <MembersOnly />
+            {/* <br /> */}
+        <MembersOnly />
           </>
         ) : (
           <>
@@ -140,27 +145,10 @@ nftIDs() {
               <option value="10">10</option>
           </select>&nbsp;
         <Button href="#" className="MintNowBtn" onClick={this.mintNFT.bind(this)}>Mint {this.state.quantity} Now</Button>
-        {/* <br /> */}
-          <MembersOnly />
+          {/* <br /> */}
+        <MembersOnly />
           </>
         )}
-       
-
-        {/* <table>
-          <thead>
-          <tr>
-            <th>
-              Token ID
-            </th>
-            <th>
-              Owner Address
-            </th>
-          </tr>
-          </thead>
-          <tbody>
-            {this.nftIDs().map((id) => <NFTRow id={id} key={id} contract={this.state.contract}/>)}
-          </tbody>
-        </table> */}
         </>
     );
   }
