@@ -4,7 +4,7 @@ import Card from '../components/Card';
 import { ThemeProvider } from 'styled-components';
 import theme from '../components/styles/theme';
 import GlobalStyles from '../components/styles/Global';
-import Header from '../components/Header';
+import Header from '../components/MembersOnlyHeader';
 import Footer from '../components/Footer';
 // import NFTRow from "../components/NFTRow";
 

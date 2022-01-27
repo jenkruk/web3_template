@@ -8,7 +8,7 @@ export const StyledFooter = styled.footer`
   bottom: 0;
   width: 100vw;
   color: #fff;
-  padding: 100px 5vw 60px 0;
+  padding: 100px 2vw 0 0;
 
 
   h1 {

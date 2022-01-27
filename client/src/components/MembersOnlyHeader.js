@@ -1,9 +1,8 @@
 import React from 'react';
-import { StyledHeader, Nav, Image } from './styles/Header.styled';
 import { Container } from './styles/Container.styled';
 import { Flex } from './styles/Flex.styled';
-import Mint from '../Web3/Mint';
 import img from '../images/19.png';
+import { StyledHeader, Nav, Image } from './styles/MembersOnlyHeader.styled';
 
 
 export default function Header(props) {
@@ -16,7 +15,8 @@ export default function Header(props) {
         <Container>
         <Flex>
           <div>
-            <Mint />
+            <h1>Members Only...</h1>
+            <h4><a href={"/"}>Back to Main Page</a></h4>
           </div>
           <Image style={{
             borderRadius: "50%", 

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const StyledCard = styled.div`
   display: flex;
   align-items: center;
-  background: rgba(6, 22, 54);  
+  background: #292929;  
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   margin: 40px 10vw;

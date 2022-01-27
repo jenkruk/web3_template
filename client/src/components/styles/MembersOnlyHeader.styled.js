@@ -19,18 +19,12 @@ background-image: ${({ theme }) => theme.colors.gradient};
     cursor: pointer;
   }
 
-  select {
-    border-radius: 5px;
-    margin: 0;
-    border: none;
-    text-align: right;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 10px 10px;
-    background-color: ${({ bg }) => bg || '#fff'};
-    color: ${({ color }) => color || '#333'};
+  h4 a{
+      border: 1px solid whitesmoke;
+      padding: 1vh 1vw;
+      cursor: pointer;
+      color: whitesmoke;
+      text-decoration: none;
   }
 
 `

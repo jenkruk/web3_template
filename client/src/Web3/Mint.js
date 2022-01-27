@@ -1,21 +1,25 @@
-import React, { Component } from "react";
+import React, { useContext, Component } from "react";
 import Web3 from "web3";
 import Frog from "../contracts/Frog.json";
 import getWeb3 from "./getWeb3";
-import { Button } from '../components/styles/Button.styled'
+import { Button } from '../components/styles/Button.styled';
 import MembersOnly from '../components/MembersOnlyBtn';
-
+import Context from '../Context';
 class Mint extends Component {
 
-  state = { storageValue: 0, web3: null, accounts: null, contract: null };
+  static contextType = Context;
+
+  state = { storageValue: 0, web3: null, accounts: null, contract: null }; 
 
   componentDidMount = async () => {
-
+    // console.log('context:', this.context);
 
     try {
+      const { setUser } = this.context;
       
       // Get network provider and web3 instance.
       const web3 = await getWeb3();
+      // console.log(web3);
       const web3socket = new Web3(new Web3.providers.WebsocketProvider('ws://localhost:7545'));
 
       // Use web3 to get the user's accounts.
@@ -39,6 +43,8 @@ class Mint extends Component {
       const currentSupply = parseInt(await instance.methods.currentSupply().call())
 
       this.setState({ web3, accounts, contract: instance, currentSupply, quantity: 1 });
+      const user = { currentSupply };
+      setUser(user);
 
       const component = this
 
@@ -86,9 +92,9 @@ nftIDs() {
 
   render() {
     
-    if (!this.state.web3) {
-      return <div>Loading Web3, accounts, and contract...</div>;
-    }
+    // if (!this.state.web3) {
+    //   return <div>Loading Web3, accounts, and contract...</div>;
+    // }
     return (
      <>
         {this.state.currentSupply === 0 ? (
@@ -146,7 +152,7 @@ nftIDs() {
           </select>&nbsp;
         <Button href="#" className="MintNowBtn" onClick={this.mintNFT.bind(this)}>Mint {this.state.quantity} Now</Button>
           {/* <br /> */}
-        <MembersOnly />
+        <MembersOnly/>
           </>
         )}
         </>
